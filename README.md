@@ -1,2 +1,5 @@
-# qrcode.github.io
-A simple QR code CSS challenge from frontendmentor.io
+# siavhnz.github.io
+This site Currently is used for frontendmentor.io challenges
+
+## Challenges:
+### 1. QR Code CSS & Html challenge

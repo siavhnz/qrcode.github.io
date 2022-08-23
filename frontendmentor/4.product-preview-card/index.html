@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" type="text/css" href="./assets/styles/output.css" />
+</head>
+<body>
+  <main class="min-h-screen flex justify-center items-center bg-cream">
+    <article class="flex flex-col rounded-xl bg-white w-11/12 xs:w-96 lg:flex-none lg:grid lg:grid-cols-2 lg:w-[37.5rem]">
+      <figure>
+        <picture>
+          <source media="(min-width:1024px)" srcset="./assets/images/image-product-desktop.jpg">
+          <source media="(max-width:1023px)" srcset="./assets/images/image-product-mobile.jpg">
+          <img class="object-fill rounded-t-xl lg:rounded-none lg:rounded-l-xl" src="./assets/images/image-product-mobile.jpg" alt="Gabrielle Essence" />
+        </picture>
+      </figure>
+      <div class="flex flex-col p-6 lg:p-8">
+        <span class="uppercase text-xs font-montserrat font-medium text-dark-grayish-blue tracking-extra-wide">
+          perfume
+        </span>
+        <h1 class="text-very-dark-blue font-fraunces font-bold text-[2rem] leading-8 mt-3 lg:mt-5">
+          Gabrielle Essence Eau De Parfum
+        </h1>
+        <p class="text-sm font-montserrat font-medium text-dark-grayish-blue leading-6 mt-4 lg:mt-6">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="flex items-center mt-4">
+          <ins class="font-fraunces font-bold text-[2rem] text-dark-cyan no-underline">
+            $149.99
+          </ins>
+          <del class="line-through font-montserrat text-dark-grayish-blue text-sm ml-4">
+            $169.99
+          </del>
+        </div>
+        <button class="w-full bg-dark-cyan text-white font-montserrat text-sm p-3 mt-3 rounded-lg before:content-[url('/assets/images/icon-cart.svg')] before:mr-2 before:align-text-top before:top-2 lg:mt-6 hover:bg-darker-cyan">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  </main>  
+</body>
+</html>

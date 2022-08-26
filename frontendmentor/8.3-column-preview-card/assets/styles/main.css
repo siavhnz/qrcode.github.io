@@ -1,0 +1,128 @@
+:root{
+    /* fonts */
+    --font-lexend-deca: 'Lexend Deca', sans-serif;
+    --font-big-shoulders-display: 'Big Shoulders Display', cursive;
+    --font-size-p: 0.9375rem; /* 15px*/
+    --font-regular: 400;
+    --font-bold: 700;
+
+    /* colors */
+    --color-bright-orange: hsl(31, 77%, 52%);
+    --color-dark-cyan: hsl(184, 100%, 22%);
+    --color-very-dark-cyan: hsl(179, 100%, 13%);
+    --color-transparent-white: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+    --color-Very-light-gray: hsl(0, 0%, 95%); /* background, headings, buttons */
+}
+
+.main {
+    background-color:var(--color-Very-light-gray);
+    display:flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+}
+
+.container {
+    max-width:20.5rem; /* 328px */
+}
+
+.item {
+    padding:3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1.75rem;
+}
+
+.item .title {
+    text-transform: uppercase;
+    color:var(--color-Very-light-gray);
+    font-family: var(--font-big-shoulders-display);
+    font-size: 2.375rem;
+    font-weight: var(--font-bold);
+    letter-spacing: 0.05rem;
+}
+
+.item .desc{
+    color:var(--color-transparent-white);
+    font-family: var(--font-lexend-deca);
+    font-weight: var(--font-regular);
+    font-size: var(--font-size-p);
+    line-height: 1.475rem;
+}
+
+.item .learn-more {
+    background-color: var(--color-Very-light-gray);
+    padding: 0.75rem 1.75rem;
+    border-radius: 25px;
+    text-transform: capitalize;
+    font-family: var(--font-lexend-deca);
+    border: 2px solid transparent;
+}
+
+/* custom classes */
+
+.sedan-radius {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.luxury-radius {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.bg-sedan{
+    background-color:var(--color-bright-orange)
+}
+
+.bg-suvs{
+    background-color: var(--color-dark-cyan);
+}
+
+.bg-luxury{
+    background-color: var(--color-very-dark-cyan);
+}
+
+.color-sedan {
+    color: var(--color-bright-orange);
+}
+
+.color-suvs{
+    color: var(--color-dark-cyan);
+}
+
+.color-luxury{
+    color: var(--color-very-dark-cyan);
+}
+
+.item .learn-more:Hover {
+    border:2px solid var(--color-Very-light-gray);
+    color: var(--color-transparent-white);
+    background-color: transparent;
+}
+
+@media screen and (min-width:1024px) {
+    .container {
+        max-width:none;
+        display: flex;
+        justify-content: center;
+    }
+    .item {
+        max-width: 19.2rem;
+    }
+    .sedan-radius {
+        border-radius: 0%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .luxury-radius {
+        border-radius: 0%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .item .desc {
+        min-height: 11rem;
+        line-height: 1.625;
+    }
+}
